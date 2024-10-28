@@ -13,7 +13,7 @@
     "parcel",
     "react"
   ],
-  "author": "Jose A. Munoz (joseledev.es)",
+  "author": "Jose A. Munoz (www.joseledev.es)",
   "license": "MIT",
   "dependencies": {
     "husky": "^9.1.6",
