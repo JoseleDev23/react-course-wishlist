@@ -4,19 +4,48 @@
   "description": "An exercise for an introduction to React",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html --open"
+    "start": "parcel ./src/index.html --open",
+    "lint": "eslint --fix \"src/**/*.{js,jsx}\"",
+    "format": "prettier --write \"*.{js,jsx,json,css}\""
   },
+ 
   "keywords": [
     "parcel",
     "react"
   ],
-  "author": "Alvaro Yuste (alvaroyuste.com)",
+  "author": "Jose A. Munoz (joseledev.es)",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.8.6",
+    "terser": "^5.36.0",
+    "tough-cookie": "^5.0.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
-  }
+    "parcel-bundler": "^1.12.5"
+  },
+
+  "prettier": { 
+    "trailingComma": "all", 
+    "singleQuote": true,
+    "semi": true
+  },
+  
+  "lint-staged": { 
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ],
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier --write", 
+      "git add"
+      ]  },
+
+  "husky": { 
+    "hooks": {"pre-commit": "lint-staged" } 
+   }
+  
 }
