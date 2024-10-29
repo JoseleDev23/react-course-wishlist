@@ -8,7 +8,6 @@
     "lint": "eslint --fix \"src/**/*.{js,jsx}\"",
     "format": "prettier --write \"*.{js,jsx,json,css}\""
   },
- 
   "keywords": [
     "parcel",
     "react"
@@ -16,6 +15,7 @@
   "author": "Jose A. Munoz (www.joseledev.es)",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.5.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
@@ -28,24 +28,23 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
-
-  "prettier": { 
-    "trailingComma": "all", 
+  "prettier": {
+    "trailingComma": "all",
     "singleQuote": true,
     "semi": true
   },
-  
-  "lint-staged": { 
+  "lint-staged": {
     "src/**/*.{js,jsx}": [
       "npm run lint"
     ],
     "src/**/*.{js,jsx,json,css,scss}": [
-      "prettier --write", 
+      "prettier --write",
       "git add"
-      ]  },
-
-  "husky": { 
-    "hooks": {"pre-commit": "lint-staged" } 
-   }
-  
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
