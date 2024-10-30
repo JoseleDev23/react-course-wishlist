@@ -18,8 +18,8 @@ const WishList = ({wishes}) => (
 WishList.propTypes = {
     wishes: PropTypes.arrayOf(
         PropTypes.shape({
-            text: PropTypes.string.isRequired,
             done: PropTypes.bool.isRequired,
+            text: PropTypes.string.isRequired,
         }).isRequired
     ).isRequired,
 };

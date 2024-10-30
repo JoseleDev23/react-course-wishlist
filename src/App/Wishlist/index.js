@@ -1,3 +1,3 @@
-import Wishinput from "../Wishinput";
+import Wishlist from "./Wishlist";
 
-export default Wishinput;
+export default Wishlist;

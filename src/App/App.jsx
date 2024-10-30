@@ -2,9 +2,9 @@ import React from "react";
 import './App.css';
 
 import Wishinput from "./Wishinput";
-import WishList from "./Wishlist/Wishlist";
+import WishList from "./Wishlist";
 
-const wishes = [
+const initialwishes = [
     {done:false , text: 'Travel to the monn'},
     {done:true , text: 'Learn Ract'},
     {done:true , text: 'Pay to the gym'},
@@ -13,10 +13,11 @@ const wishes = [
 ]
 
 const App = () => {
+    const [wishes, setWishes] = React.useState(initialwishes);
     return (
         <div className="app">
             <h1>My Wishlist APP</h1>
-            <Wishinput />
+            <Wishinput oneNewWish={wish => setWishes([wish, ...wishes])} />
             <WishList wishes={wishes} />
             <button className="wish-clear" type="button">Archive Done</button>
         </div>
