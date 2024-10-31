@@ -9,7 +9,7 @@ const Wishitem = ({ done, text, id, onDoneChange }) => (
     <input
       id={id}
       checked={done}
-      onChange={(e) => onDoneChange(id, e.target.checked)}
+      onChange={(e) => onDoneChange(e.target.checked)}
       type="checkbox"
     />
     <label htmlFor={id}> {text} </label>

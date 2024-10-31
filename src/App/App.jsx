@@ -18,7 +18,11 @@ const App = () => {
       <h1>My Wishlist APP</h1>
       <Wishinput oneNewWish={(wish) => setWishes([wish, ...wishes])} />
       <WishList wishes={wishes} onWishesChange={setWishes} />
-      <button className="wish-clear" type="button">
+      <button
+        className="wish-clear"
+        type="button"
+        onClick={() => setWishes(wishes.filter((wish) => !wish.done))}
+      >
         Archive Done
       </button>
     </div>
