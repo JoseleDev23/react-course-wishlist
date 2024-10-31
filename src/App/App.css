@@ -62,4 +62,14 @@ align-items: center;
     font-size: 1.2rem;
     border-radius: 3px;
 }
+.wish-list__item--warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.wish-list__item--danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
 
