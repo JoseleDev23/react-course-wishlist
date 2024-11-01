@@ -14,7 +14,7 @@ Características:
 
 # Próximas mejoras
 
-- Añadir funcionalidad para eliminar deseos.
+- Añadir funcionalidad para eliminar deseos.(Funcionalidad puesta)
 - Implementar un almacenamiento local para mantener la lista entre sesiones.
 
 # Contribuciones
