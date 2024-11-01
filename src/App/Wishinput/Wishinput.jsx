@@ -5,7 +5,7 @@ const Wishinput = ({ oneNewWish }) => {
   const [newWishText, setNewWishText] = React.useState('');
   return (
     <fieldset className="wish-input">
-      <legend className="wish-input__label">New Wish</legend>
+      <legend className="wish-input__label">Add a Wish</legend>
       <input
         className="wish-input__field"
         placeholder="New Wish"
